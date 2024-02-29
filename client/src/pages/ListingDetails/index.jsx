@@ -11,7 +11,6 @@ import SearchPage from "~/components/SearchPage";
 import Slider from "react-slick";
 import Search from "~/components/Search";
 import { Rating } from "@mui/material";
-import { flushSync } from "react-dom";
 
 const cx = classNames.bind(styles);
 
@@ -77,50 +76,50 @@ const FEATURED_RESORT = [
   {
     link: "#!",
     image: images.resort,
-    name: "Lahaina, Hawaii",
+    name: "Margaritaville Vacation Club by Wyndham - Rio Mar",
     time: "May 4 - May 11, 2024",
     available: "Hilton Vacation Club Kaanapali Beach",
-    price: "from $285 per night",
+    price: " $285/night",
   },
   {
     link: "#!",
     image: images.resort,
-    name: "Lahaina, Hawaii",
+    name: "Margaritaville Vacation Club by Wyndham - Rio Mar",
     time: "May 4 - May 11, 2024",
     available: "Hilton Vacation Club Kaanapali Beach",
-    price: "from $285 per night",
+    price: " $285/night",
   },
   {
     link: "#!",
     image: images.resort,
-    name: "Lahaina, Hawaii",
+    name: "Margaritaville Vacation Club by Wyndham - Rio Mar",
     time: "May 4 - May 11, 2024",
     available: "Hilton Vacation Club Kaanapali Beach",
-    price: "from $285 per night",
+    price: " $285/night",
   },
   {
     link: "#!",
     image: images.resort,
-    name: "Lahaina, Hawaii",
+    name: "Margaritaville Vacation Club by Wyndham - Rio Mar",
     time: "May 4 - May 11, 2024",
     available: "Hilton Vacation Club Kaanapali Beach",
-    price: "    $285 per night",
+    price: " $285/night",
   },
   {
     link: "#!",
     image: images.resort,
-    name: "Lahaina, Hawaii",
+    name: "Margaritaville Vacation Club by Wyndham - Rio Mar",
     time: "May 4 - May 11, 2024",
     available: "Hilton Vacation Club Kaanapali Beach",
-    price: "$285 per night",
+    price: " $285/night",
   },
   {
     link: "#!",
     image: images.resort,
-    name: "Lahaina, Hawaii",
+    name: "Margaritaville Vacation Club by Wyndham - Rio Mar",
     time: "May 4 - May 11, 2024",
     available: "Hilton Vacation Club Kaanapali Beach",
-    price: "$285 per night",
+    price: " $285/night",
   },
 ];
 
@@ -147,16 +146,95 @@ const TOP_RESORT = [
     price: "from $125 night",
   },
 ];
-
+const RESORT_DETAIL = [
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+  {
+    link: "#!",
+    image: images.koala,
+    name: "Gatlinburg, Tennessee",
+    address: "Westgate Smoky Mountain Resor",
+    unit: "5 Bedrooms Villa",
+    room: "20",
+    date: "June 30 - Jul 7 2024",
+    night: "7",
+    price: "$875",
+    host: images.koala_myles,
+  },
+];
 const blog_link = {
   link: "/blog",
 };
-
-// const FEATURES_RENTALS = [
-//   {
-//     icon:
-//   }
-// ]
 
 function CustomNextArrow(props) {
   const { onClick } = props;
@@ -208,6 +286,7 @@ function ListingDetails() {
   const [topResort, setTopResort] = useState(TOP_RESORT);
   const [featuredResort, setFeaturedResort] = useState(FEATURED_RESORT);
   const [favList, setFavList] = useState(FAVORITE_DESTINATIONS);
+  const [listingResort, setListingResort] = useState(RESORT_DETAIL);
 
   // const handleSearch = (e) => {
   //   setSearch(e.target.value);
@@ -241,23 +320,6 @@ function ListingDetails() {
             <Link to="#!">
               <img src={item.image} alt={item.name} className={cx("f-image")} />
               <div className={cx("f-heart-bandle")}>
-                <div className={cx("exclusive")}>
-                  <svg
-                    className={cx("crown")}
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
-                    <path
-                      d="M4.58333 14.6666L2.75 4.58329L7.79167 9.16663L11 3.66663L14.2083 9.16663L19.25 4.58329L17.4167 14.6666H4.58333ZM17.4167 17.4166C17.4167 17.9666 17.05 18.3333 16.5 18.3333H5.5C4.95 18.3333 4.58333 17.9666 4.58333 17.4166V16.5H17.4167V17.4166Z"
-                      fill="#FF0000"
-                    />
-                  </svg>
-                  <text className={cx("f-bandle")}>Exclusive</text>
-                </div>
-
                 <svg
                   className={cx("f-heart-icon")}
                   xmlns="http://www.w3.org/2000/svg"
@@ -274,18 +336,65 @@ function ListingDetails() {
               </div>
 
               <section className={cx("f-content")}>
+                <h4>{item.available}</h4>
                 <h3 className={cx("f-name")}>{item.name}</h3>
                 <div className={cx("f-row")}></div>
                 <span className={cx("f-available")}></span>
                 <span className={cx("date")}>{item.time}</span>
                 <div className={cx("f-row", "f-price")}>
                   <p className={cx("f-text")}>{item.price}</p>
-                  <div className={cx("f-sale")}>
-                    <button className={cx("f-button")}>40% off</button>
-                  </div>
                 </div>
               </section>
             </Link>
+          </div>
+        </div>
+      );
+    });
+  };
+  const detailsListing = () => {
+    return listingResort.map((item, index) => {
+      return (
+        <div className={cx("room-type-wrapper")}>
+          <div className={cx("room-type-block")}>
+            <div className={cx("content-wrapper")}>
+              {/* Left content */}
+              <div className={cx("left-content")}>
+                <div className={cx("left-row")}>
+                  <img
+                    src={images.koala}
+                    alt="Thumb_Image"
+                    className={cx("thumb-img")}
+                  />
+                  <div className={cx("list-item")}>
+                    {/* First List */}
+                    <div className={cx("first-list")}>
+                      <div className={cx("left-content")}>
+                        <h2 className={cx("sub-title")}>{item.name}</h2>
+                        <h2 className={cx("sub-title")}>{item.address}</h2>
+                      </div>
+                      <div className={cx("guest", "row")}>
+                        <div className={cx("text")}>{item.unit}</div>
+                      </div>
+                      <div className={cx("area", "row")}>
+                        <div className={cx("text")}>{item.room}</div>
+                      </div>
+                      <div className={cx("area", "row")}>
+                        <div className={cx("text")}>{item.date}</div>
+                      </div>
+                      <div className={cx("area", "row")}>
+                        <div className={cx("text")}>{item.night}</div>
+                      </div>
+                      <div className={cx("area", "row")}>
+                        <div className={cx("text")}>{item.price}</div>
+                      </div>
+                      <div className={cx("icon")}>
+                        <img style={{marginLeft: 15}} src={item.host} className={cx("crumb-img")} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       );
@@ -349,22 +458,36 @@ function ListingDetails() {
           <div className={cx("top-resort")}>
             {/* List box */}
             <div style={{ marginTop: 60 }} className={cx("top-resort-header")}>
-              <h2 className={cx("title")}>Deals you'll love in HCM City</h2>
+              <h2 className={cx("title")}>Featured Listing</h2>
             </div>
             {/*Featured Listing */}
             <div className={cx("featured-listing")}>
               <Slider {...settings}>{featuredListing()}</Slider>
             </div>
-            {/*Feature Events */}
-            <div style={{ marginTop: 60 }} className={cx("top-resort-header")}>
-              <h2 className={cx("title")}>Top Resorts In HCM City</h2>
+            {/*Listing Details */}
+            <div className={cx("top-unit")}>
+              <div className={cx("crumb-unit")}>
+                <div style={{ fontWeight: "bold" }} className={cx("sub-title")}>Listing 4368 result</div>
+              </div>
+              <div className={cx("left-content")}>
+              <div className={cx("row")}>
+                  <div className={cx("text")}>Unit</div>
+                </div>
+                <div className={cx("row")}>
+                  <div className={cx("text")}>Sleep</div>
+                </div>
+                <div className={cx("row")}>
+                  <div className={cx("text")}>Dates/Nights</div>
+                </div>
+                <div className={cx("row")}>
+                  <div className={cx("text")}>Price</div>
+                </div>
+                <div className={cx("area", "row")}>
+                  <div className={cx("text")}>Host</div>
+                </div>
+              </div>
             </div>
-            <div className={cx("destination-box")}>
-              {renderFavoriteDestination()}
-            </div>
-            <label className={cx("crumb-destination")}>
-              SEE ALL RESORT IN HCM CITY
-            </label>
+            <div>{detailsListing()}</div>
           </div>
           {/* FAQ's */}
           <section className={cx("faq-wrapper")}>
@@ -389,7 +512,10 @@ function ListingDetails() {
                   to anyone in the world.
                 </label>
               </div>
-              <div style={{display: 'flex', justifyContent: 'center'}}> <button className={cx("faq-button")}>Find More</button></div>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {" "}
+                <button className={cx("faq-button")}>Find More</button>
+              </div>
             </div>
           </section>
           {/* I love deals */}
