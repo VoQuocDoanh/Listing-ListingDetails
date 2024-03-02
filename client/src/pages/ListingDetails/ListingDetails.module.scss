@@ -88,165 +88,6 @@
       max-height: 280px;
     }
   }
-
-  // Body
-  .body {
-    margin-top: 53px;
-    .top-resort-header {
-      display: flex;
-      justify-content: space-between;
-      .title {
-        font-family: "Poppins", sans-serif;
-        font-size: 2.6rem;
-        font-weight: 600;
-      }
-      .button {
-        width: 60px;
-        height: 30px;
-        border: none;
-        border-radius: 10px;
-        background: #0091b3;
-        color: white;
-        cursor: pointer;
-      }
-    }
-    .featured-listing {
-      margin-top: 15px;
-    }
-    .featured-events {
-      margin-top: 12px;
-      display: grid;
-      gap: 31px;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .list-box {
-    }
-
-    // Top resort
-    .top-resort {
-      width: calc(var(--width-search-page) + 50px);
-      margin-top: 35px;
-      .crumb-destination {
-        display: flex;
-        justify-content: center;
-        border-radius: 3rem;
-        padding: 0 6rem;
-        color: #ffffff;
-        font-size: 2.2rem;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        margin: 4rem auto 0;
-        letter-spacing: 0.2px;
-        cursor: pointer;
-      }
-      .link {
-        display: inline-block;
-        border: none;
-      }
-
-      .list-box {
-        width: 100%;
-        margin-top: 15px;
-        padding: 0 40px;
-      }
-      // Box
-      .box {
-        width: 340px;
-        transition: all 0.4s;
-        margin: 10px;
-        .image {
-          display: block;
-          width: 100%;
-          height: 205px;
-          object-fit: cover;
-          border-radius: 10px;
-          position: relative;
-        }
-        .heart-bandle {
-          display: flex;
-          align-items: center;
-          position: absolute;
-          top: 5%;
-          margin-left: 10px;
-          .bandle {
-            background-color: white;
-            padding: 3px;
-            border-radius: 5px;
-            color: green;
-            font-weight: 500;
-            font-size: 1.5rem;
-            font-family: "Roboto", sans-serif;
-          }
-          .heart-icon {
-            margin-left: 190px;
-            fill: rgba(49, 49, 49, 0.13);
-            stroke-width: 1px;
-            stroke: #525252;
-          }
-        }
-
-        .content {
-          width: 100%;
-          .row {
-            display: flex;
-            align-items: center;
-          }
-
-          padding-top: 23px;
-          color: #000;
-          font-family: "Inter", sans-serif;
-
-          .name {
-            font-size: 1.6rem;
-            font-weight: 400;
-          }
-
-          .location {
-            color: #3baac5;
-            gap: 8px;
-            .icon {
-              width: 20px;
-              height: 20px;
-            }
-            .text {
-              font-size: 1.8rem;
-              font-weight: 500;
-              line-height: 1.6;
-            }
-          }
-
-          .available {
-            display: inline-block;
-            font-size: 1.6rem;
-            font-weight: 400;
-            color: #222222;
-            line-height: 1.6;
-            font-weight: 700;
-          }
-
-          .price {
-            margin-top: 5px;
-            gap: 5px;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-
-            .text {
-              font-size: 1.6rem;
-              font-weight: 400;
-              line-height: 1.6;
-              color: #303030;
-            }
-            .rating {
-              display: flex;
-              align-items: center;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 /*Featured Listing*/
 
@@ -261,22 +102,6 @@
     object-fit: cover;
     border-radius: 10px;
     position: relative;
-  }
-  .f-heart-bandle {
-    display: flex;
-    position: absolute;
-    top: 5%;
-    margin-left: 10px;
-    width: 300px;
-    justify-content: end;
-    .crown {
-    }
-  }
-  .f-heart-icon {
-    margin-left: 190px;
-    fill: rgba(49, 49, 49, 0.13);
-    stroke-width: 1px;
-    stroke: #525252;
   }
 }
 
@@ -359,48 +184,6 @@
   color: white;
   font-weight: bold;
 }
-/* EVENTS FEATURED */
-.events-box {
-  width: 340px;
-  transition: all 0.4s;
-  .e-content {
-    position: relative;
-    .e-image {
-      display: block;
-      width: 100%;
-      height: 255px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .e-price {
-      position: absolute;
-      right: 3rem;
-      top: 2rem;
-      font-size: 1.4rem;
-      font-weight: 500;
-      font-family: "Roboto", sans-serif;
-      background-color: #16100dcc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.8rem;
-      color: white;
-      width: 130px;
-      height: 40px;
-    }
-    .e-name {
-      position: absolute;
-      left: 3.5rem;
-      bottom: 1.5rem;
-      font-size: 2.4rem;
-      color: white;
-      font-weight: 500;
-      font-family: "Roboto", sans-serif;
-    }
-    .e-content {
-    }
-  }
-}
 
 // React slick  ================
 .slick-btn {
@@ -439,67 +222,6 @@
   z-index: 1;
 }
 
-//////// Favorite-box
-
-.destination-box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 12px;
-  .d-box {
-    display: flex;
-    justify-content: center;
-    .link-content {
-      border: 1px solid #ccc;
-      border-radius: 13px;
-    }
-    .img {
-      height: 205px;
-      width: 255px;
-      border-radius: 12px 12px 0 0;
-      object-fit: cover;
-    }
-    .name {
-      font-size: 2rem;
-      font-family: "Roboto", sans-serif;
-      color: #15100d;
-      margin: 0;
-      padding: 5px;
-    }
-    .description {
-      font-size: 1.6rem;
-      font-family: "Roboto", sans-serif;
-      color: #666;
-      margin: 0;
-      line-height: 24px;
-      width: 210px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding: 5px;
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 18px;
-      width: 250px;
-      padding: 5px;
-      margin-bottom: 5px;
-
-      .price {
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 1.6;
-        color: #303030;
-        font-family: "Poppins", sans-serif;
-      }
-      .rating-star {
-      }
-    }
-  }
-}
-
 // FAQ's wreappper
 .faq-wrapper {
   width: 100%;
@@ -508,7 +230,7 @@
   border-top: 8px solid #26707b;
   filter: drop-shadow(0 0 0.75rem rgb(187, 187, 187));
   border-radius: 12px;
-  margin-top: 160px;
+  margin-top: 60px;
   margin-left: 30px;
   .faq-content {
     .top-content {
@@ -658,8 +380,8 @@
 .room-type-wrapper {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
-
+  justify-content: space-evenly;
+  margin-right: 50px;
   .title {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -668,15 +390,9 @@
 
   .room-type-block {
     width: 90%;
-    border: #b1aaaa solid 1px;
-    border-radius: 20px;
-
+    border-top: 1px solid rgb(190, 190, 190);
     .content-wrapper {
-      justify-content: space-between;
       padding: 10px;
-      display: flex;
-      justify-content: center;
-
       .thumb-img {
         width: 133px;
         height: 91px;
@@ -685,7 +401,7 @@
 
       .left-row {
         display: flex;
-        align-self: center;
+        justify-content: space-around;
 
         .text {
           margin: 0 10px 0 10px;
@@ -707,6 +423,7 @@
             display: grid;
             font-size: 1.2rem;
             width: 35%;
+            margin-left: -50px;
           }
           .icon {
             margin-bottom: 30px;
@@ -724,6 +441,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-size: 1.5rem;
           }
         }
 
@@ -742,16 +460,15 @@
 //
 .top-unit {
   margin-top: 50px;
-  width: 1060px;
+  width: 1040px;
   display: flex;
   justify-content: space-evenly;
-  margin-left: 20px;
   .crumb-unit {
     display: flex;
     width: 40%;
     justify-content: space-evenly;
     .sub-title {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-family: "Roboto", sans-serif;
     }
   }
@@ -759,12 +476,36 @@
     display: flex;
     width: 60%;
     justify-content: space-around;
-    margin-left: 250px;
+    margin-left: 190px;
     .row {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-family: "Roboto", sans-serif;
       .text {
       }
     }
   }
+  
 }
+.benefit {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 80px;
+  .crumb-benefit {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 210px;
+    .benefit-img {
+    }
+    .benefit-text {
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif ;
+      line-height: 3rem;
+    }
+  }
+}
+/// Benefit

@@ -156,7 +156,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
   {
@@ -168,7 +168,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
   {
@@ -180,7 +180,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
   {
@@ -192,7 +192,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
   {
@@ -204,7 +204,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
   {
@@ -216,7 +216,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
   {
@@ -228,7 +228,7 @@ const RESORT_DETAIL = [
     room: "20",
     date: "June 30 - Jul 7 2024",
     night: "7",
-    price: "$875",
+    price: "$875 night",
     host: images.koala_myles,
   },
 ];
@@ -288,30 +288,6 @@ function ListingDetails() {
   const [favList, setFavList] = useState(FAVORITE_DESTINATIONS);
   const [listingResort, setListingResort] = useState(RESORT_DETAIL);
 
-  // const handleSearch = (e) => {
-  //   setSearch(e.target.value);
-  //   // setList(data);
-  // };
-
-  const renderFavoriteDestination = () => {
-    return favList.map((item, index) => {
-      return (
-        <div key={index} className={cx("d-box")}>
-          <Link to={item.link} className={cx("link-content")}>
-            <img src={item.image} alt={item.name} className={cx("img")} />
-            <h3 className={cx("name")}>{item.name}</h3>
-            <div className={cx("description")}> {item.description}</div>
-            <div className={cx("row", "rating")}>
-              <p className={cx("price")}>{item.price}</p>
-              <div className={cx("rating-star")}>
-                <Rating name="size-large" defaultValue={2} size="large" />
-              </div>
-            </div>
-          </Link>
-        </div>
-      );
-    });
-  };
   const featuredListing = () => {
     return featuredResort.map((item, index) => {
       return (
@@ -319,21 +295,7 @@ function ListingDetails() {
           <div className={cx("featured-box")}>
             <Link to="#!">
               <img src={item.image} alt={item.name} className={cx("f-image")} />
-              <div className={cx("f-heart-bandle")}>
-                <svg
-                  className={cx("f-heart-icon")}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z"
-                    fill="#FFD233"
-                  />
-                </svg>
-              </div>
+              <div className={cx("heart-bandle")}></div>
 
               <section className={cx("f-content")}>
                 <h4>{item.available}</h4>
@@ -363,14 +325,48 @@ function ListingDetails() {
                   <img
                     src={images.koala}
                     alt="Thumb_Image"
+                    style={{borderRadius: 12}}
                     className={cx("thumb-img")}
                   />
                   <div className={cx("list-item")}>
                     {/* First List */}
                     <div className={cx("first-list")}>
                       <div className={cx("left-content")}>
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "start",
+                            border: " 1px solid #b7b7b7",
+                            borderRadius: 5,
+                            width: "35%",
+                            alignItems: "center",
+                            color: "red",
+                            padding: 2,
+                            marginBottom: 10
+                          }}
+                          className={cx("heart-bandle")}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.5 7.99992C16.5 9.49992 16 11.4999 13.6 12.2999C14.3 10.5999 14.4 8.89992 13.9 7.29992C13.2 5.19992 10.9 3.59992 9.3 2.69992C8.9 2.39992 8.2 2.79992 8.3 3.39992C8.3 4.49992 8 6.09992 6.3 7.79992C4.1 9.99992 3 12.2999 3 14.4999C3 17.3999 5 20.9999 9 20.9999C5 16.9999 8 13.4999 8 13.4999C8.8 19.3999 13 20.9999 15 20.9999C16.7 20.9999 20 19.7999 20 14.5999C20 11.4999 18.7 9.09992 17.6 7.69992C17.3 7.19992 16.6 7.49992 16.5 7.99992Z"
+                              fill="#FF0101"
+                            />
+                          </svg>
+                          <text  className={cx("bandle")}>Hot Deal</text>
+                        </div>
                         <h2 className={cx("sub-title")}>{item.name}</h2>
-                        <h2 className={cx("sub-title")}>{item.address}</h2>
+                        <h2
+                          style={{ fontWeight: 400 }}
+                          className={cx("sub-title")}
+                        >
+                          {item.address}
+                        </h2>
                       </div>
                       <div className={cx("guest", "row")}>
                         <div className={cx("text")}>{item.unit}</div>
@@ -388,7 +384,11 @@ function ListingDetails() {
                         <div className={cx("text")}>{item.price}</div>
                       </div>
                       <div className={cx("icon")}>
-                        <img style={{marginLeft: 15}} src={item.host} className={cx("crumb-img")} />
+                        <img
+                          style={{ marginLeft: 15 }}
+                          src={item.host}
+                          className={cx("crumb-img")}
+                        />
                       </div>
                     </div>
                   </div>
@@ -477,7 +477,7 @@ function ListingDetails() {
                   <div className={cx("text")}>Sleep</div>
                 </div>
                 <div className={cx("row")}>
-                  <div className={cx("text")}>Dates/Nights</div>
+                  <div style={{marginLeft: 0}} className={cx("text")}>Dates/Nights</div>
                 </div>
                 <div className={cx("row")}>
                   <div className={cx("text")}>Price</div>
@@ -488,6 +488,20 @@ function ListingDetails() {
               </div>
             </div>
             <div>{detailsListing()}</div>
+            <div className={cx("benefit")}>
+              <div className={cx("crumb-benefit")}>
+                <img className={cx("benefit-img")} src={images.one} alt="pic" />
+                <p className={cx("benefit-text")}>#1 marketplace to rent directly from vacation club owners</p>
+              </div>
+              <div className={cx("crumb-benefit")}>
+                <img className={cx("benefit-img")} src={images.two} alt="pic" />
+                <p className={cx("benefit-text")}>Unbeatable travel deals you won’t find anywhere else</p>
+              </div>
+              <div className={cx("crumb-benefit")}>
+                <img className={cx("benefit-img")} src={images.three} alt="pic"/>
+                <p className={cx("benefit-text")}> You are protected, so go ahead and book with confidence</p>
+              </div>
+            </div>
           </div>
           {/* FAQ's */}
           <section className={cx("faq-wrapper")}>
