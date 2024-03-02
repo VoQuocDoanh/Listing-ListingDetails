@@ -231,7 +231,6 @@
   filter: drop-shadow(0 0 0.75rem rgb(187, 187, 187));
   border-radius: 12px;
   margin-top: 60px;
-  margin-left: 30px;
   .faq-content {
     .top-content {
       display: grid;
@@ -264,13 +263,18 @@
       background-color: #1cb9541a;
       background-color: rgba(28, 185, 84, 0.1019607843);
       border-radius: 15px;
-      border: 1px solid #1cb954;
+      border: 2px solid #1cb954;
       align-items: center;
       padding: 3.75px 7.5px;
       color: #1cb954;
       font-family: "Roboto", sans-serif;
       font-weight: 500;
       font-size: 1.6rem;
+      cursor: pointer;
+      // transition: all 0.4s;
+      // &:hover {
+      //   background-color: #b6ff89;
+      // }
     }
   }
 }
@@ -281,7 +285,6 @@
   height: 240px;
   background-color: #26707b;
   font-family: "Poppins", sans-serif;
-  margin-left: 30px;
   .explore-content {
     display: flex;
     align-items: center;
@@ -366,7 +369,13 @@
     }
   }
 }
-
+// Top resort header
+.top-resort-header{
+  .title{
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+  }
+}
 //Details Listing
 .row {
   display: flex;
@@ -460,7 +469,7 @@
 //
 .top-unit {
   margin-top: 50px;
-  width: 1040px;
+  width: 1035px;
   display: flex;
   justify-content: space-evenly;
   .crumb-unit {

@@ -281,7 +281,6 @@ const settings = {
 };
 
 function ListingDetails() {
-  // const [search, setSearch] = useState("");
   const [input, setInput] = useState("");
   const [topResort, setTopResort] = useState(TOP_RESORT);
   const [featuredResort, setFeaturedResort] = useState(FEATURED_RESORT);
@@ -342,7 +341,7 @@ function ListingDetails() {
                             alignItems: "center",
                             color: "red",
                             padding: 2,
-                            marginBottom: 10
+                            marginBottom: 8
                           }}
                           className={cx("heart-bandle")}
                         >
@@ -458,7 +457,7 @@ function ListingDetails() {
           <div className={cx("top-resort")}>
             {/* List box */}
             <div style={{ marginTop: 60 }} className={cx("top-resort-header")}>
-              <h2 className={cx("title")}>Featured Listing</h2>
+              <h2 style={{fontWeight: 600}} className={cx("title")}>Featured Listing</h2>
             </div>
             {/*Featured Listing */}
             <div className={cx("featured-listing")}>

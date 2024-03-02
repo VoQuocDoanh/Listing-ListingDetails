@@ -3,6 +3,7 @@ import Destination from "~/pages/Destination";
 import Search from "~/pages/Search";
 import Listing from "~/pages/Listing";
 import ListingDetails from "~/pages/ListingDetails";
+import TimeshareRentals from "~/pages/TimeshareRentals";
 const routes = [
   {
     path: "/",
@@ -29,6 +30,12 @@ const routes = [
     component: ListingDetails,
     layout: null,
   },
+  {
+    path: "/timesharerentals",
+    component: TimeshareRentals ,
+    layout: null,
+  }
+
 ];
 
 export default routes;
