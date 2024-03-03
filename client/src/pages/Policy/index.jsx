@@ -106,7 +106,7 @@ function Policy() {
         {/*Social container */}
         <div className={cx("social-content")}>
           <div className={cx("right-content")}>
-            <img className={cx("privacy-img")} src={images.privacy} alt="pic" />
+            <img className={cx("privacy-img")} src={images.comerce} alt="pic" />
           </div>
           <div className={cx("left-content")}>
             <div className={cx("header-wrapper")}>

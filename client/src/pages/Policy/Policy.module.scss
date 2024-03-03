@@ -48,6 +48,7 @@
       .privacy-img {
         width: 490px;
         height: 360px;
+        padding: 40px;
         object-fit: cover;
       }
     }
@@ -119,9 +120,10 @@
         align-items: start;
         max-width: 50%;
       .privacy-img {
-        width: 490px;
+        width: 420px;
         height: 360px;
         object-fit: cover;
+        padding: 40px;
       }
     }
     .left-content {
@@ -195,6 +197,7 @@
       width: 430px;
       height: 360px;
       object-fit: cover;
+      padding: 40px;
     }
   }
 }

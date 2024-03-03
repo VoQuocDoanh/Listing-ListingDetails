@@ -29,6 +29,7 @@ const images = {
   ccpa:require("~/assets/images/ccpa.jpg"),
   caloppa: require("~/assets/images/caloppa.jpg"),
   generate:   require("~/assets/images/generate.jpg"),
+  comerce:   require("~/assets/images/comerce.jpg"),
 };
 
 export default images;
