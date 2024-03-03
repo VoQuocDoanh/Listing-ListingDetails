@@ -23,7 +23,12 @@ const images = {
   one: require("~/assets/images/one.jpg"),
   two: require("~/assets/images/two.jpg"),
   three: require("~/assets/images/three.jpg"),
-  koala_myles: require("~/assets/images/Koala_Myles.jpg")
+  koala_myles: require("~/assets/images/Koala_Myles.jpg"),
+  privacy: require("~/assets/images/privacy.jpg"),
+  gdpr: require("~/assets/images/gdpr.jpg"),
+  ccpa:require("~/assets/images/ccpa.jpg"),
+  caloppa: require("~/assets/images/caloppa.jpg"),
+  generate:   require("~/assets/images/generate.jpg"),
 };
 
 export default images;

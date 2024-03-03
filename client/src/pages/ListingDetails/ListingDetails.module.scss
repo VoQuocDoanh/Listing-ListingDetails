@@ -48,6 +48,7 @@
   .top-content {
     display: flex;
     justify-content: center;
+    position: relative;
     .heading {
       display: flex;
       gap: 10px;
@@ -60,17 +61,6 @@
       padding: 20px;
       font-weight: 500;
       color: #15100d;
-    }
-    .heading-desc {
-      font-size: 2.4rem;
-      font-family: "Poppins", sans-serif;
-      position: absolute;
-      top: 35%;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      color: white;
-      font-weight: 600;
     }
     .search {
       width: 100%;
@@ -85,7 +75,7 @@
       border-radius: 10px;
       position: relative;
       object-fit: cover;
-      max-height: 280px;
+      max-height: 300px;
     }
   }
 }

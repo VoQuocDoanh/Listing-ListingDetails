@@ -324,7 +324,7 @@ function ListingDetails() {
                   <img
                     src={images.koala}
                     alt="Thumb_Image"
-                    style={{borderRadius: 12}}
+                    style={{ borderRadius: 12 }}
                     className={cx("thumb-img")}
                   />
                   <div className={cx("list-item")}>
@@ -341,7 +341,7 @@ function ListingDetails() {
                             alignItems: "center",
                             color: "red",
                             padding: 2,
-                            marginBottom: 8
+                            marginBottom: 8,
                           }}
                           className={cx("heart-bandle")}
                         >
@@ -357,7 +357,7 @@ function ListingDetails() {
                               fill="#FF0101"
                             />
                           </svg>
-                          <text  className={cx("bandle")}>Hot Deal</text>
+                          <text className={cx("bandle")}>Hot Deal</text>
                         </div>
                         <h2 className={cx("sub-title")}>{item.name}</h2>
                         <h2
@@ -437,9 +437,6 @@ function ListingDetails() {
             <label>HCM</label>
             <label>City</label>
           </div>
-          <h3 className={cx("heading-desc")}>
-            Dynamic cities, dramatic coastline, and oh, those Pacific sunsets
-          </h3>
           <img className={cx("header-img")} src={images.koala} alt="pic" />
           {/*Search*/}
           <section className={cx("search")}>{/* <SearchPage /> */}</section>
@@ -457,7 +454,9 @@ function ListingDetails() {
           <div className={cx("top-resort")}>
             {/* List box */}
             <div style={{ marginTop: 60 }} className={cx("top-resort-header")}>
-              <h2 style={{fontWeight: 600}} className={cx("title")}>Featured Listing</h2>
+              <h2 style={{ fontWeight: 600 }} className={cx("title")}>
+                Featured Listing
+              </h2>
             </div>
             {/*Featured Listing */}
             <div className={cx("featured-listing")}>
@@ -466,17 +465,21 @@ function ListingDetails() {
             {/*Listing Details */}
             <div className={cx("top-unit")}>
               <div className={cx("crumb-unit")}>
-                <div style={{ fontWeight: "bold" }} className={cx("sub-title")}>Listing 4368 result</div>
+                <div style={{ fontWeight: "bold" }} className={cx("sub-title")}>
+                  Listing 4368 result
+                </div>
               </div>
               <div className={cx("left-content")}>
-              <div className={cx("row")}>
+                <div className={cx("row")}>
                   <div className={cx("text")}>Unit</div>
                 </div>
                 <div className={cx("row")}>
                   <div className={cx("text")}>Sleep</div>
                 </div>
                 <div className={cx("row")}>
-                  <div style={{marginLeft: 0}} className={cx("text")}>Dates/Nights</div>
+                  <div style={{ marginLeft: 0 }} className={cx("text")}>
+                    Dates/Nights
+                  </div>
                 </div>
                 <div className={cx("row")}>
                   <div className={cx("text")}>Price</div>
@@ -490,15 +493,26 @@ function ListingDetails() {
             <div className={cx("benefit")}>
               <div className={cx("crumb-benefit")}>
                 <img className={cx("benefit-img")} src={images.one} alt="pic" />
-                <p className={cx("benefit-text")}>#1 marketplace to rent directly from vacation club owners</p>
+                <p className={cx("benefit-text")}>
+                  #1 marketplace to rent directly from vacation club owners
+                </p>
               </div>
               <div className={cx("crumb-benefit")}>
                 <img className={cx("benefit-img")} src={images.two} alt="pic" />
-                <p className={cx("benefit-text")}>Unbeatable travel deals you won’t find anywhere else</p>
+                <p className={cx("benefit-text")}>
+                  Unbeatable travel deals you won’t find anywhere else
+                </p>
               </div>
               <div className={cx("crumb-benefit")}>
-                <img className={cx("benefit-img")} src={images.three} alt="pic"/>
-                <p className={cx("benefit-text")}> You are protected, so go ahead and book with confidence</p>
+                <img
+                  className={cx("benefit-img")}
+                  src={images.three}
+                  alt="pic"
+                />
+                <p className={cx("benefit-text")}>
+                  {" "}
+                  You are protected, so go ahead and book with confidence
+                </p>
               </div>
             </div>
           </div>
