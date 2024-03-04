@@ -19,9 +19,10 @@ function Policy() {
           <div className={cx("left-content")}>
             <h1 className={cx("generate")}>Generate Your Privacy Policy</h1>
             <p className={cx("customized")}>
-              We create customized Privacy Policies for web, Android & iOS app,
-              Facebook app, Twitter developer account, Squarespace, Blogger,
-              Wordpress, Shopify and more.
+              Welcome to TIVAS. This Privacy Policy outlines our practices
+              regarding the collection, use, and disclosure of personal
+              information when you use our services. By accessing or using the
+              Website, you agree to the terms outlined in this Privacy Policy.
             </p>
             <button className={cx("button")}>
               {" "}
@@ -110,24 +111,25 @@ function Policy() {
           </div>
           <div className={cx("left-content")}>
             <div className={cx("header-wrapper")}>
+              <div className={cx("card-body")}>
+                <h1 className={cx("generate")}>Security</h1>
+                <p className={cx("customized")}>
+                  We implement security measures to protect your information,
+                  but we cannot guarantee absolute security.
+                </p>
+              </div>
               <div
                 style={{
-                  borderRight: "1px solid #dddddd",
-                  paddingRight: 15,
+                  borderLeft: "1px solid #dddddd",
+                  paddingLeft: 15,
                 }}
                 className={cx("card-body")}
               >
-                <h1 className={cx("generate")}>For e-commerce stores</h1>
+                <h1 className={cx("generate")}>Cookies and Technologies</h1>
                 <p className={cx("customized")}>
-                  If your website or app has the option to receive payments then
-                  including a Privacy Policy is required by law.
-                </p>
-              </div>
-              <div style={{ paddingLeft: 15 }} className={cx("card-body")}>
-                <h1 className={cx("generate")}>For mobile & apps</h1>
-                <p className={cx("customized")}>
-                  For any app you are developing you will need a Privacy Policy
-                  to launch it.
+                  We use cookies and similar technologies to enhance your
+                  experience. You can manage cookies through your browser
+                  settings.
                 </p>
               </div>
             </div>
@@ -147,13 +149,16 @@ function Policy() {
         </div>
         {/*Review content*/}
         <div className={cx("bottom-container")}>
-            <div className={cx("left-content")}>
-              <h1 className={cx("generate")}>Generate Your Privacy Policy</h1>
-              <p className={cx("customized")}>
-                We create customized Privacy Policies for web, Android & iOS
-                app, Facebook app, Twitter developer account, Squarespace,
-                Blogger, Wordpress, Shopify and more.
-              </p>
+          <div className={cx("left-content")}>
+            <h1 className={cx("generate")}>Your Choices</h1>
+            <p className={cx("customized")}>
+              You can control the information you provide and limit data
+              processing by adjusting account settings or contacting us.
+            </p>
+            <p className={cx("customized")}>
+              Contact Us: If you have questions or concerns, contact us at
+              [Tivas@gmail.com].
+            </p>
           </div>
           <div className={cx("right-content")}>
             <img

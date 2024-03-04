@@ -12,11 +12,11 @@
       display: grid;
       align-items: start;
       max-width: 50%;
+      gap: 12px;
       .generate {
         font-size: 5.6rem;
         font-family: "Roboto", sans-serif;
         font-weight: 600;
-        margin-bottom: 1.5rem;
         color: #3f4554;
       }
       .customized {
@@ -50,6 +50,7 @@
         height: 360px;
         padding: 40px;
         object-fit: cover;
+        border-radius: 20%;
       }
     }
   }

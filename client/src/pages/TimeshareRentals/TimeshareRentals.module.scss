@@ -20,24 +20,32 @@
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    width:1340px;
+    width: 1340px;
     gap: 30px;
-    .left-image {
-      width: 126px;
-      height: 126px;
-      display: flex;
-      justify-content: center;
-    }
+
     .mid-text {
-      display: grid;
+      display: flex;
       font-family: 2.8rem;
       color: #222222;
       font-family: "Roboto", sans-serif;
       margin-right: 20px;
-    }
-    .click {
-      color: #0091b3;
-      font-size: 1.6rem;
+      .left-image {
+        width: 126px;
+        height: 126px;
+        display: flex;
+        justify-content: center;
+      }
+      .left-child {
+        .click {
+          color: #0091b3;
+          font-size: 1.6rem;
+        }
+        .text{
+          display: grid;
+          margin-left: 30px;
+        }
+      }
+      
     }
     .right-content {
       display: grid;
@@ -47,7 +55,7 @@
       height: 126px;
       background-color: #f2f0ed;
       padding: 20px 15px 20px 15px;
-      margin-left: 230px;
+      margin-left: 330px;
       .crumb-text {
         display: flex;
         justify-content: center;
@@ -305,7 +313,7 @@
 }
 
 //
-.top-resort{
+.top-resort {
   display: grid;
   justify-content: center;
 }
@@ -319,7 +327,7 @@
         width: 320px;
         align-items: start;
         display: flex;
-        padding-left:10px;
+        padding-left: 10px;
       }
       .listing-nights {
         width: 85px;
