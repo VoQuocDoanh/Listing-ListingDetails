@@ -156,7 +156,7 @@ function Policy() {
               processing by adjusting account settings or contacting us.
             </p>
             <p className={cx("customized")}>
-              Contact Us: If you have questions or concerns, contact us at
+              Contact Us: If you have questions or concerns please contact us at
               [Tivas@gmail.com].
             </p>
           </div>

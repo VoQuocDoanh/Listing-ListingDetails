@@ -159,25 +159,25 @@ function TimeshareRentals() {
                           <p className={cx("new")}>New!</p>
                         </h2>
                       </div>
-                      <div style={{ width: 85 }} className={cx("guest", "row")}>
+                      <div style={{ width: 85, textAlign: 'start', marginLeft: -12 }} className={cx("guest", "row")}>
                         <div className={cx("text")}>{item.nights}</div>
                       </div>
                       <div
-                        style={{ width: 206, fontWeight: 600 }}
+                        style={{ width: 206, fontWeight: 600, textAlign: 'start'  }}
                         className={cx("area", "row")}
                       >
                         <div className={cx("text")}>{item.price}</div>
                       </div>
-                      <div style={{ width: 205 }} className={cx("area", "row")}>
+                      <div style={{ width: 205, textAlign: 'start'  }} className={cx("area", "row")}>
                         <div className={cx("text")}>{item.room}</div>
                       </div>
-                      <div style={{ width: 65 }} className={cx("area", "row")}>
+                      <div style={{ width: 65 ,textAlign: 'start'  }} className={cx("area", "row")}>
                         <div className={cx("text")}>{item.sleeps}</div>
                       </div>
-                      <div style={{ width: 122 }} className={cx("area", "row")}>
+                      <div style={{ width: 122, textAlign: 'start', marginLeft: 15  }} className={cx("area", "row")}>
                         <div className={cx("text")}>{item.building}</div>
                       </div>
-                      <div style={{ width: 122 }} className={cx("area", "row")}>
+                      <div style={{ width: 122, textAlign: 'start'  }} className={cx("area", "row")}>
                         <div className={cx("text")}>{item.view}</div>
                       </div>
                       <button

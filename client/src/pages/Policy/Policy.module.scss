@@ -41,6 +41,7 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
+        cursor: pointer;
       }
     }
     .right-content {
@@ -93,6 +94,7 @@
       display: flex;
       justify-content: center;
       gap: 5px;
+      cursor: pointer;
       .button {
         display: flex;
         align-items: center;
@@ -107,6 +109,7 @@
         color: white;
         font-family: "Roboto", sans-serif;
         gap: 8px;
+        cursor: pointer;
       }
     }
   }
